@@ -2,8 +2,6 @@ import { Container, Text, Button, Group, Grid, Paper, Title, Pill, Alert } from 
 import classes from './Herosection.css';
 import Applelogo from '../Image/apple.png';
 import Windowlogo from '../Image/windows.png';
-import For_mac from '../Upload/Mac/backend-1.0.0-arm64.dmg'
-import For_win from '../Upload/Windows/MIMO-packed-player.zip'
 import { useState } from 'react';
 
 
@@ -14,14 +12,14 @@ const Herosection = () => {
 
     const [seealert, setalert] = useState(false);
     const Download_setup_for_mac = () => {
-        window.location.href = For_mac;
+        window.location.href = "https://drive.usercontent.google.com/download?id=1OUMsuuflXohs5S_Od1rW1Kzme-g_zuVn&export=download&authuser=1";
         setalert(true);
         setTimeout(() => {
             setalert(false);
         }, 2000);
     }
     const Download_setup_for_win = () => {
-        window.location.href = For_win;
+        window.location.href = "https://drive.usercontent.google.com/download?id=1bVnU_XTV4yLTdqcpgamhFNknDkfKAV3j&export=download&authuser=1";
         setalert(true);
         setTimeout(() => {
             setalert(false);
@@ -112,7 +110,7 @@ const Herosection = () => {
                                     <h3 style={{ color: 'black' }}>Take your Music-player with you</h3>
                                 </Title>
                             </div>
-                            <Button variant="white" color="dark" onClick={Download_setup_for_win}>
+                            <Button variant="white" color="dark" onClick={Download_setup_for_win} target="-blank">
                                 Download
                             </Button>
                         </Paper>
@@ -148,7 +146,7 @@ const Herosection = () => {
                                     <h3 style={{ color: 'whitesmoke' }}>Take your Music-player with you</h3>
                                 </Title>
                             </div>
-                            <Button variant="white" color="dark" onClick={Download_setup_for_mac}>
+                            <Button variant="white" color="dark" onClick={Download_setup_for_mac} target="-blank">
                                 Download
                             </Button>
                         </Paper>
